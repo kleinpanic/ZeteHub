@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Valid Entry</title>
+</head>
+<body>
+    <h1>Add Valid Entry</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Entry</button>
+    </form>
+    <a href="{% url 'admin:directory_validentry_changelist' %}">Back to Valid Entries</a>
+</body>
+</html>

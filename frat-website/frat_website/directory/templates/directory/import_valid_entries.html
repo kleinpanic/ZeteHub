@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Import Valid Entries</title>
+</head>
+<body>
+    <h1>Import Valid Entries</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'admin:directory_validentry_changelist' %}">Back to Valid Entries</a>
+</body>
+</html>
